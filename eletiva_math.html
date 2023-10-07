@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head >
+    <p>calculos com potência  , mutipliticao e diviso</p>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title >my calculation</title>
+</head>
+
+<body>
+    <input type="text" id="hhh">
+    <br>
+    <br>
+    <input type="text" id="my_js">
+    
+    <b></b> <button onclick="go()" id="jjj">calcule</button>
+    
+    
+    
+    <div>
+        <h1 id="rrr"></h1>
+         <br>
+         <br>
+         <br>
+         <br>
+       <h1 style="font-family: arial;">my other projet</h1>
+       <br><div color="black">
+         <a href="number random.html">steve jobs</a>
+         </br>
+         <a href="\eletiva_1\hbb.html">calculation</a>
+         <br>
+           <a href="\eletiva_1\Nova pasta\New folder\sitema _de_longi.html">sistema de longi</a>
+         </br>
+       </div>
+    
+    
+    
+    <script>
+        document.body.style.background= "black"
+        function go() {
+            //aqui foi declarado uma funcao chamada go
+
+            var numero1 = parseInt(document.getElementById('hhh').value);//essa duas variave pega os valores do Input
+            var numero2 = parseInt(document.getElementById('my_js').value)
+            
+             var not_a_number = document.getElementById("rrr");//não é um numero 
+            
+            var change_value = document.getElementById("button")
+            
+            
+            var mutipliticao = Number(numero1*numero2)/*this 3 varible get value (multiplication, division in potentiation)*/
+            var divisao = Number(numero1/numero2)
+            var poteciação =  Number(numero1**numero2);
+            var po = numero1/100//um sinal (/)represeda divisao no javascript e no python equado duas(//)e pra cometa
+            var re = po*numero2 
+            
+            if (isNaN(poteciação)) {
+                //codicao serais executado se os input nao for numero 
+                var test =document.getElementById("rrr")
+                test.textContent = "not a numbers";
+            } else {
+                //else ou (outro ,outra) no ingle serais executado se a codicao do if(se) for falsa
+                var oooj =document.getElementById("rrr").textContent = "essa conta em mutiplição fica =  "  +mutipliticao+  "  em divisao fica =  "+ divisao + "  em poteciação  ="+poteciação+"  E em pocetagem"+numero1+"%"+"de"+numero2 +"="+re 
+            }console.log(oooj)
+            console.log(this)//iprimi no console a variave oooj que amazena o valor do relsudado
+        }//curso em video
+    </script>
+    
+    <style>
+        @keyframes animatio{
+             0%{
+                color :black;
+                }30%{
+                    color: rgb(253, 21, 0);
+                }
+                50%{
+                    color :"red";
+                }
+            100%{
+                color: rgb(9, 144, 255);
+                
+            }    
+        }
+        
+        #hhh {
+            color:red;
+            background-color: rgb(4, 139, 206);
+        }
+        #rrr {
+            position: absolute;
+            top: 129px;
+            color: black;
+            background-color: orange;
+            font-family: fantasy;
+            animation-name:animatio;
+            animation-duration: 69s;
+            animation-iteration-count: infinite;
+        }
+        #my_js {
+            color: black;
+            background-color: green;
+        }
+        #jjj {
+            position: absolute;
+            top: 69px;
+            left: 199px;
+            height: 33px;
+            background-color:white;
+            color: rgb(54, 1, 248);
+            font-family: impact;
+            scale:90%;
+        }
+        p {
+            color: blue;
+            font-family: impact;
+        }
+        input {
+            height: 33px;
+        }div{
+            height:169px;
+            
+            position: static;
+            background-color: #232F3E;
+            top: 66px;
+            left: 40%;
+            }
+            
+            a{
+                color:rgb(248, 248, 248);
+            }
+    </style>
+</body>
+</html>

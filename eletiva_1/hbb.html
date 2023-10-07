@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        /* Estilos CSS aqui */
+    </style>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <div id="calculator">
+        <input type="text" id="display" disabled>
+        <button id="clear">C</button>
+        <button id="divide">/</button>
+        <button id="multiply">*</button>
+        <button id="subtract">-</button>
+        <button id="add">+</button>
+        <button id="seven">7</button>
+        <button id="eight">8</button>
+        <button id="nine">9</button>
+        <button id="four">4</button>
+        <button id="five">5</button>
+        <button id="six">6</button>
+        <button id="one">1</button>
+        <button id="two">2</button>
+        <button id="three">3</button>
+        <button id="zero">0</button>
+        <button id="equals">=</button>
+    </div>
+
+    <script>
+        // JavaScript com erros aqui
+        document.getElementById('clear').addEventListener('click', () => clear());
+        document.getElementById('divide').addEventListener('click', () => divide("-"));
+        document.getElementById('multiply').addEventListener('click', () => multiply("+"));
+        document.getElementById('subtract').addEventListener('click', () => subtract());
+        document.getElementById('add').addEventListener('click', () => add());
+        document.getElementById('seven').addEventListener('click', () => appendNumber('7'));
+        document.getElementById('eight').addEventListener('click', () => appendNumber('8'));
+        document.getElementById('nine').addEventListener('click', () => appendNumber('9'));
+        document.getElementById('four').addEventListener('click', () => appendNumber('4'));
+        document.getElementById('five').addEventListener('click', () => appendNumber('5'));
+        document.getElementById('six').addEventListener('click', () => appendNumber('6'));
+        document.getElementById('one').addEventListener('click', () => appendNumber('1'));
+        document.getElementById('two').addEventListener('click', () => appendNumber('2'));
+        document.getElementById('three').addEventListener('click', () => appendNumber('3'));
+        document.getElementById('zero').addEventListener('click', () => appendNumber('0'));
+        document.getElementById('equals').addEventListener('click', () => calculate());
+
+        let currentInput = '';
+        let operator = '';
+        let firstNumber = '';
+        let secondNumber = '';
+
+        function appendNumber(number) {
+            currentInput += number;
+            document.getElementById('display').value = currentInput;
+        }
+
+        function clear() {
+            currentInput = '';
+            operator = '';
+            firstNumber = '';
+            secondNumber = '';
+            document.getElementById('display').value = '';
+        }
+
+        function divide() {
+            operator = '/';
+            firstNumber = currentInput;
+            currentInput = '';
+        }
+
+        function multiply() {
+            operator = '*';
+            firstNumber = currentInput;
+            currentInput = '';
+        }
+
+        function subtract() {
+            operator = '-';
+            firstNumber = currentInput;
+            currentInput = '';
+        }
+
+        function add() {
+            operator = '+';
+            firstNumber = currentInput;
+            currentInput = '';
+        }
+
+        function calculate() {
+            secondNumber = currentInput;
+            currentInput = eval(firstNumber + operator + secondNumber);
+            document.getElementById('display').value = currentInput;
+        }
+    </script>
+</body>
+</html>
