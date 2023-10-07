@@ -2,8 +2,11 @@
 
 <html lang="en">
 <head >
-    <p>calculos com potência  , mutipliticao,diviso</p>
+    <div style="background-color: red;" class="divh">
+       <p>calculos com potência  , mutipliticao ,diviso e porcentagem</p>
+    </div >
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title >my calculation</title>
 </head>
@@ -18,20 +21,16 @@
     
     
     
-    <div>
-        <h1 id="rrr"></h1>
-         <br>
-         <br>
-         <br>
-         <br>
-       <h1 style="font-family: arial;">my other projet</h1>
-       <br><div color="black">
-         <a href="number random.html">steve jobs</a>
-         </br>
-         <a href="\eletiva_1\hbb.html">calculation</a>
-         <br>
-           <a href="\eletiva_1\Nova pasta\New folder\sitema _de_longi.html">sistema de longi</a>
-         </br>
+    <div class="nnn">
+        <h1 id="rrr">texto1</h1>
+        <br>
+        <br>
+        <br>
+         <h1 id="mutipliticao" style="background-color: red;">texto</h1>
+         <h1 id="divi" style="background-color: orangered;">texto3</h1>
+         <h1 id ="porc" style="background-color: yellow ; height: 54px; left: 7%;">testo</h1>
+        </BR>
+      
        </div>
     
     
@@ -48,7 +47,9 @@
             
             var change_value = document.getElementById("button")
             
-            
+            var muti = document.getElementById("mutipliticao")
+            var porce = document.getElementById("porc")
+            var dvis = document.getElementById("divi")
             var mutipliticao = Number(numero1*numero2)/*this 3 varible get value (multiplication, division in potentiation)*/
             var divisao = Number(numero1/numero2)
             var poteciação =  Number(numero1**numero2);
@@ -59,9 +60,16 @@
                 //codicao serais executado se os input nao for numero 
                 var test =document.getElementById("rrr")
                 test.textContent = "not a numbers";
+                muti.textContent ="not a number"
+                dvis.textContent = "not a number"
+                porce.textContent= "not a number"
             } else {
                 //else ou (outro ,outra) no ingle serais executado se a codicao do if(se) for falsa
-                var oooj =document.getElementById("rrr").textContent = "essa conta em mutiplição fica =  "  +mutipliticao+  "  em divisao fica =  "+ divisao + "  em poteciação  ="+poteciação+"  E em pocetagem"+numero1+"%"+"de"+numero2 +"="+re 
+                var oooj =document.getElementById("rrr").textContent =numero1+"^"+numero2+"="+poteciação
+                muti.textContent =numero= numero1+"X"+numero2+"="+mutipliticao
+                dvis.textContent =numero1+"-"+numero2+"="+divisao
+                porce.textContent= numero1+"%"+numero2+"="+re
+
             }console.log(oooj)
             console.log(this)//iprimi no console a variave oooj que amazena o valor do relsudado
         }//curso em video
@@ -85,7 +93,8 @@
         
         #hhh {
             color:red;
-            background-color: rgb(4, 139, 206);
+            background-color: gold;
+            height: 23px;
         }
         #rrr {
             position: absolute;
@@ -100,35 +109,36 @@
         #my_js {
             color: black;
             background-color: green;
+            height: 23px;
         }
         #jjj {
-            position: absolute;
-            top: 69px;
+            position: static;
+            top:111px;
             left: 199px;
             height: 33px;
             background-color:white;
-            color: rgb(54, 1, 248);
-            font-family: impact;
-            scale:90%;
-        }
+            color:black;
+            font-family: impact;}
+            
         p {
             color: blue;
             font-family: impact;
         }
         input {
             height: 33px;
-        }div{
-            height:169px;
+        }.nnn{
+            height: 370px;;
             
             position: static;
             background-color: #232F3E;
-            top: 66px;
-            left: 40%;
+            top: px;
+            left: 111px;
             }
             
             a{
                 color:rgb(248, 248, 248);
             }
+            
     </style>
 </body>
 </html>
