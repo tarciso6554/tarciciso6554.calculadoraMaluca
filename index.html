@@ -17,7 +17,7 @@
     <br>
     <input type="text" id="my_js">
     
-    <b></b> <button onclick="go()" id="jjj">calcule</button>
+    <b></b> <button onclick="go()" onmouseover="mause()" id="jjj" onmouseleave="retira()">calcule</button>
     
     
     
@@ -38,6 +38,7 @@
     <script>
         document.body.style.background= "black"
         function go() {
+
             //aqui foi declarado uma funcao chamada go
 
             var numero1 = parseInt(document.getElementById('hhh').value);//essa duas variave pega os valores do Input
@@ -67,12 +68,24 @@
                 //else ou (outro ,outra) no ingle serais executado se a codicao do if(se) for falsa
                 var oooj =document.getElementById("rrr").textContent =numero1+"^"+numero2+"="+poteciação
                 muti.textContent =numero= numero1+"X"+numero2+"="+mutipliticao
-                dvis.textContent =numero1+"÷"+numero2+"="+divisao
+                dvis.textContent =numero1+"÷ "+numero2+"="+divisao
                 porce.textContent= numero1+"%"+numero2+"="+re
 
             }console.log(oooj)
-            console.log(this)//iprimi no console a variave oooj que amazena o valor do relsudado
-        }//curso em video
+            console.log(this)
+        }
+    </script>
+    <script>
+        const nnj=document.getElementById("jjj")
+        function mause(){
+            
+            nnj.classList.add("my_class")          
+        }
+        function retira(){
+            nnj.classList.remove("my_class")
+
+
+        }
     </script>
     
     <style>
@@ -90,7 +103,26 @@
                 
             }    
         }
-        
+        @keyframes button{
+            1%{
+                transform: scale(1.1);
+                }
+            20%{
+                transform: scale(1.3);
+            }
+            50%{
+                transform: scale(1.4);
+            } 
+            100%{
+                transform: scale(1.1);
+            } 
+
+        }
+        .my_class{
+            animation:button;
+            animation-duration:3s ;
+            animation-iteration-count: infinite;
+        }
         #hhh {
             color:red;
             background-color: gold;
@@ -103,7 +135,7 @@
             background-color: orange;
             font-family: fantasy;
             animation-name:animatio;
-            animation-duration: 69s;
+            animation-duration: 6s;
             animation-iteration-count: infinite;
         }
         #my_js {
@@ -138,6 +170,42 @@
             a{
                 color:rgb(248, 248, 248);
             }
+            #mutipliticao{
+            position: absolute;
+            top: 189px;
+            color: black;
+            background-color: rgb(0, 0, 0);
+            font-family: fantasy;
+            animation-name:animatio;
+            animation-duration: 6s;
+            animation-iteration-count: infinite;
+               
+            
+            }
+            #divi{
+            height:8%;
+            position: absolute;
+            top: 270px;
+            color: black;
+            background-color: orange;
+            font-family: fantasy;
+            animation-name:animatio;
+            animation-duration: 6s;
+            animation-iteration-count: infinite;
+            }
+
+    h1{
+       position: absolute;
+       left:7%;
+    }
+    #porc{
+       top:60%;
+    }
+    body {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; }
+
+
             
     </style>
 </body>
