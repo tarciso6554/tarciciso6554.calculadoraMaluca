@@ -29,3 +29,149 @@
     <h1 id="mutipliticao" class="result">Multiplicação</h1>
     <h1 id="divi" class="result">Divisão</h1>
     <h1 id="porc" class="result">Porcentagem</h1>
+
+    <script>
+        function go() {
+            var numero1 = parseInt(document.getElementById('hhh').value);
+            var numero2 = parseInt(document.getElementById('my_js').value);
+
+            if (!isNaN(numero1) && !isNaN(numero2)) {
+                var poteciação = numero1 ** numero2;
+                var mutipliticao = numero1 * numero2;
+                var divisao = numero1 / numero2;
+                var po = numero1 / 100;
+                var re = po * numero2;
+
+                var rrr = document.getElementById("rrr");
+                var muti = document.getElementById("mutipliticao");
+                var dvis = document.getElementById("divi");
+                var porce = document.getElementById("porc");
+
+                rrr.textContent = numero1 + "^" + numero2 + "=" + poteciação;
+                muti.textContent = numero1 + "x" + numero2 + "=" + mutipliticao;
+                dvis.textContent = numero1 + "/" + numero2 + "=" + divisao;
+                porce.textContent = numero1 + "%" + numero2 + "=" + re;
+            } else {
+                var test = document.getElementById("rrr");
+                test.textContent = "numero ivalido";
+                var muti = document.getElementById("mutipliticao");
+                muti.textContent = "numero ivalido";
+                var dvis = document.getElementById("divi");
+                dvis.textContent = "numero ivalido";
+                var porce = document.getElementById("porc");
+                porce.textContent = "numero ivalido";
+            }
+        }
+    </script>
+     <style>
+        #jjj{
+            margin: 0%;
+            padding: 1%;
+            height: 7%;
+            border:19%;
+            border-radius:1%;
+        }
+            body {
+                font-family: 'Arial', sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f1f1f1;
+            }
+    
+            #menu {
+                background-color: #333;
+                overflow: hidden;
+            }
+    
+            #menu a {
+                float: left;
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+    
+            #menu a:hover {
+                background-color: #ddd;
+                color: black;
+            }
+    
+            h1 {
+                color: rgb(255, 0, 0);
+                margin: 1%;
+                padding: 0%;
+                text-align: left;
+            }
+    
+            #hhh,
+            #my_js {
+                color:black;
+                background-color: #f9fdff;
+                height: 40px;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-weight: bold;
+                font-size: 16px;
+                transition: background-color 0.3s, transform 0.3s;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+                transform-origin: center;
+            }
+    
+            #hhh:hover,
+            #my_js:hover {
+                background-color: white;
+                transform: scale(1.05);
+            }
+    
+    
+            button.neon-button {
+                background-color: #0f0;
+                box-shadow: 0 10px #0f0;
+                animation: neon-glow 1.5s ease-in-out infinite alternate;
+            }
+    
+            @keyframes neon-glow {
+                from {
+                    box-shadow: 0 0 80px #0f0;
+                }
+    
+                to {
+                    box-shadow: 0 0 15px #0f0, 0 0 20px #0f0, 0 0 25px #0f0;
+                }
+            }
+    
+            h1.typewriter {
+                overflow: hidden;
+                border-right: 0.15em solid transparent;
+                white-space: nowrap;
+                margin: 0 auto;
+                letter-spacing: 15em;
+                animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+            }
+    
+            @keyframes button-scale {
+                0%,
+                100% {
+                    transform: scale(1.1);
+                }
+    
+                20% {
+                    transform: scale(1.3);
+                }
+    
+                50% {
+                    transform: scale(1.4);
+                }
+            }
+    
+            .my_class {
+                animation: button-scale 3s infinite;
+            }
+        </style>
+
+</body>
+
+ </html>
