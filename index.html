@@ -1,151 +1,31 @@
-<!DOCTYPE html 5>
+<!DOCTYPE html>
 
-<html lang="en">
-<head >
-    <div style="background-color: red;" class="divh">
-       <p>CALCULADORA MALUCA</p>
-    </div >
+
+<head>
+    <link rel="icon" href="G:\eletiva_1\—Pngtree—cartoon brain thinking in confusion_5489694.png" type="image/png">
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title >CALCULADORA MALUCA</title>
+    <title>CALCULADORA MALUCA</title>
+   
 </head>
 
 <body>
-    <input type="text" id="hhh" placeholder="digite seu primero valor">
-    <br>
-    <br>
-    <input type="text" id="my_js" placeholder="digite seu segudo valor">
-    
-   <button   id="jjj" > cacuala</button>
-        
-   
-        <h1 id="rrr">potencição</h1>
-        
-    
-         <h1 id="mutipliticao"style=" height: 54px; left: 7%;" >mutiplitição</h1>
-         <h1 id="divi" style=" height: 54px; left: 7%;">divisão</h1>
-         <h1 id ="porc" style=" height: 54px; left: 7%;">porcetagem</h1>
-        </BR>
-      
-       </div></div>
 
-<script>
-    var getelement1=document.getElementById("jjj").value
-    var getelement2=document.getElementById("my_js").value
-    let ll=document.getElementById("rrr")
-    ll.textContent=getelement1+ge
+    <div id="menu">
+        <a href="#">Home</a>
+        <a href="G:\eletiva_1\Nova pasta\jnj.html">Sobre</a>
+        <a href="https://github.com/tarciso6554/tarcisio6554.my_calculation.com" download>codigo fonte</a>
+    </div>
 
-</script>
-       
+    <h1>CALCULADORA MALUCA</h1>
 
+    <input type="text" id="hhh" placeholder="Digite seu primeiro valor">
+    <br><br>
+    <input type="text" id="my_js" placeholder="Digite seu segundo valor">
 
-<style>
-    html,body{
-        overflow: hidden;
-        overflow-x: hidden;
-    }
-    
-   h1{
-        margin: 1%;
-        padding: 0%;
+    <button id="jjj" onclick="go()">Calcular</button>
 
-    }
-    hhh,mj_js{
-        color:white;
-    }
-    @keyframes button {
-    0%, 100% {
-        transform: scale(1.1);
-    }
-    20% {
-        transform: scale(1.3);
-    }
-    50% {
-        transform: scale(1.4);
-    }
-}
-
-.my_class {
-    animation: button 3s infinite; 
-    animation: neon-glow 1.5s ease-in-out infinite alternate;
-}
-
-
-#hhh, #my_js {
-   
-    color:rgb(24, 22, 22);
-    background-color: #f9fdff;
-    height: 40px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 16px;
-    transition: background-color 0.3s, transform 0.3s;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Efeito de sombra com valores ajustados */
-
-    /* Efeito de escala no hover */
-    transform-origin: center;
-}
-
-#hhh:hover, #my_js:hover {
-    background-color:white;
-    transform: scale(1.05);
-}
-
-/* Estilos para todos os botões */
-button {
-    height: 6%;
-    padding: 1%;
-    margin: 1%;
-    border-radius: 12%;
-}
-
-
-
-
-/* Animação de botão de neon */
-button.neon-button {
-    background-color: #0f0;
-    box-shadow: 0 10px #0f0;
-    animation: neon-glow 1.5s ease-in-out infinite alternate;
-}
-
-@keyframes neon-glow {
-    from {
-        box-shadow: 0 0 80px #0f0;
-    }
-    to {
-        box-shadow: 0 0 15px #0f0, 0 0 20px #0f0, 0 0 25px #0f0;
-    }
-}
-
-/* Animação de texto de máquina de escrever */
-h1.typewriter {
-    overflow: hidden;
-    border-right: 0.15em solid transparent;
-    white-space: nowrap;
-    margin: 0 auto;
-    letter-spacing: 15em;
-    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
-}
-/* Animação de botão com escala */
-@keyframes button-scale {
-    0%, 100% {
-        transform: scale(1.1);
-    }
-    20% {
-        transform: scale(1.3);
-    }
-    50% {
-        transform: scale(1.4);
-    }
-}
-.my_class {
-    animation: button-scale 3s infinite;
-}
-</style>
-</body>
-</html>
+    <h1 id="rrr">Potenciação</h1>
+    <h1 id="mutipliticao" class="result">Multiplicação</h1>
+    <h1 id="divi" class="result">Divisão</h1>
+    <h1 id="porc" class="result">Porcentagem</h1>
