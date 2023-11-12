@@ -2,18 +2,18 @@
 
 
 <head>
-    <link rel="icon" href="Pngtree—cartoon brain thinking in confusion_5489694.png" type="image/png">
+    <link rel="icon" href="G:\eletiva_1\—Pngtree—cartoon brain thinking in confusion_5489694.png" type="image/png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CALCULADORA MALUCA</title>
    
 </head>
 
-<body>
+<body id="jjj">
 
     <div id="menu">
         <a href="#">Home</a>
-        <a href="index.html.html">Sobre</a>
+        <a href="G:\eletiva_1\Nova pasta\jnj.html">Sobre</a>
         <a href="https://github.com/tarciso6554/tarcisio6554.my_calculation.com" download>codigo fonte</a>
     </div>
 
@@ -23,7 +23,8 @@
     <br><br>
     <input type="text" id="my_js" placeholder="Digite seu segundo valor">
 
-    <button id="jjj" onclick="go()">Calcular</button>
+    <button class="glow-on-hover" type="button" onclick="go()">calcula</button>
+
 
     <h1 id="rrr">Potenciação</h1>
     <h1 id="mutipliticao" class="result">Multiplicação</h1>
@@ -64,14 +65,85 @@
         }
     </script>
      <style>
-        #jjj{
-            margin: 0%;
-            padding: 1%;
-            height: 7%;
-            border:19%;
-            border-radius:1%;
-        }
+        html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+   
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+
+.glow-on-hover {
+    width: 14vh;
+    height: 7vh;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+            
+        
+
             body {
+                height: 100%;
+                
                 font-family: 'Arial', sans-serif;
                 margin: 0;
                 padding: 0;
@@ -108,8 +180,8 @@
             #my_js {
                 color:black;
                 background-color: #f9fdff;
-                height: 40px;
-                padding: 10px 20px;
+                height: 16px;
+                padding: 14px 14px;
                 border: none;
                 border-radius: 5px;
                 cursor: pointer;
