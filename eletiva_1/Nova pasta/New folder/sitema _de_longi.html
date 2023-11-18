@@ -1,42 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Longi</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <title>Document</title>
 </head>
+
 <body>
-    <div>
-        <input type="text" placeholder="Digite nome de usuário" id="jjj"><p>Nome de usuário</p></input>
-        <input type="password" placeholder="Digite sua senha" id="lll"><p>Digite sua senha</p></input>
-        <button type="button" onclick="button1()">Login</button>
-    </div>
     <style>
-        div {
-            margin: 5%;
-            width: 20%;
-            height: 188px;
-            background-image: url("thumb-1920-430831.jpg");
-            background-size: 666px;
-            left: 99%;
-        }
-        input {
-            position: relative;
-        }
-        p {
-            color: white;
-            font-family: inherit;
+        body {
+            display: absolute;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
         }
     </style>
     <script>
-        document.body.style.background = "black";
-        function button1() {
-            var getInput = document.getElementById("lll").value;
-            var input = document.getElementById("jjj").value;
-            
-           
-            console.log("nome:",input,"senha:",getInput);
+        let board;
+        let player = "X";
+
+        function setup() {
+            createCanvas(300, 300);
+            board = [
+                ["", "", ""],
+                ["", "", ""],
+                ["", "", ""]
+            ];
+        }
+
+        function draw() {
+            background(200);
+            drawBoard();
+            checkWinner();
+        }
+
+        function drawBoard() {
+            let w = width / 3;
+            let h = height / 3;
+
+            for (let i = 0; i < 3; i++) {
+                for (let j = 0; j < 3; j++) {
+                    let x = i * w;
+                    let y = j * h;
+                    let cell = board[i][j];
+                    textSize(33);
+                    textAlign(CENTER, CENTER);
+                    stroke(i);
+                    fill(255);
+                    rect(x, y, w, h);
+                    text(cell, x + w / 2, y + h / 2);
+                }
+            }
+        }
+
+        function mousePressed() {
+            let i = floor(mouseX / (width / 3));
+            let j = floor(mouseY / (height / 3));
+            if (board[i][j] === '' && !checkWinner()) {
+                board[i][j] = player;
+                player = (player === 'X') ? 'O' : 'X';
+            }
+        }
+
+        function checkWinner() {
+            for (let i = 0; i < 3; i++) {
+                if (checkLine(board[i][0], board[i][1], board[i][2])) {
+                    highlightLine(i * width / 3, 0, i * width / 3, height);
+                    return true;
+                }
+            }
+
+            // Verificar linhas verticais
+            for (let j = 0; j < 3; j++) {
+                if (checkLine(board[0][j], board[1][j], board[2][j])) {
+                    highlightLine(0, j * height / 3, width, j * height / 3);
+                    return true;
+                }
+            }
+
+            // Verificar diagonais
+            if (checkLine(board[0][0], board[1][1], board[2][2])) {
+                highlightLine(0, 0, width, height);
+                return true;
+            }
+
+            if (checkLine(board[0][2], board[1][1], board[2][0])) {
+                highlightLine(0, height, width, 0);
+                return true;
+            }
+
+            // Se nenhum dos casos acima for verdadeiro, não há vencedor
+            return false;
+        }
+
+        function checkLine(a, b, c) {
+            return (a !== '' && a === b && b === c);
+        }
+
+        function highlightLine(x1, y1, x2, y2) {
+            stroke(255, 0, 0);
+            strokeWeight(4);
+            line(x1 + width / 6, y1 + height / 6, x2 + width / 6, y2 + height / 6);
         }
     </script>
 </body>
+
 </html>
