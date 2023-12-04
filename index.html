@@ -30,11 +30,22 @@
     <h1 id="mutipliticao" class="result">Multiplicação</h1>
     <h1 id="divi" class="result">Divisão</h1>
     <h1 id="porc" class="result">Porcentagem</h1>
-    <p id="SO">sistema operscional</p>
+    
+  
     <script>
         function go() {
             var numero1 = parseInt(document.getElementById('hhh').value);
             var numero2 = parseInt(document.getElementById('my_js').value);
+            var poteciação = numero1 ** numero2;
+            var mutipliticao = numero1 * numero2;
+            var divisao = numero1 / numero2;
+            var po = numero1 / 100;
+            var re = po * numero2;
+
+            var rrr = document.getElementById("rrr");
+            var muti = document.getElementById("mutipliticao");
+            var dvis = document.getElementById("divi");
+            var porce = document.getElementById("porc");
 
             if (!isNaN(numero1) && !isNaN(numero2)) {
                 var poteciação = numero1 ** numero2;
@@ -52,30 +63,23 @@
                 muti.textContent = numero1 + "x" + numero2 + "=" + mutipliticao;
                 dvis.textContent = numero1 + "/" + numero2 + "=" + divisao;
                 porce.textContent = numero1 + "%" + numero2 + "=" + re;
-            } else {
-                var test = document.getElementById("rrr");
-                test.textContent = "numero ivalido";
-                var muti = document.getElementById("mutipliticao");
-                muti.textContent = "numero ivalido";
-                var dvis = document.getElementById("divi");
-                dvis.textContent = "numero ivalido";
-                var porce = document.getElementById("porc");
-                porce.textContent = "numero ivalido";
+            } else{
+                rrr.textContent ="not a number"
+                muti.textContent ="not a number"
+                dvis.textContent = "not a number"
+                porce.textContent ="not a number"
             }
         }
-        var sistema_operaciona= window.navigator.platform;
-        var operacional= document.getElementById('SO')
-        operacional.textContent=sistema_operaciona
-       
+        
+
     </script>
      <style>
         p{
             position: absolute;
-            top:85%;
-            left: 85%;
-            
-}
-        html,
+            left: 56%;
+            top: 66%;
+        }
+    html,
 body {
     margin: 0;
     padding: 0;
@@ -98,7 +102,7 @@ body {
     cursor: pointer;
     position: relative;
     z-index: 0;
-    border-radius: 10px;
+    border-radius: 100px;
 }
 
 .glow-on-hover:before {
