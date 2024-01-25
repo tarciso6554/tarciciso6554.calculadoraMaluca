@@ -1,210 +1,131 @@
 <!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
+        <title>Babylon.js sample code</title>
 
-<head>
-    <link rel="icon" href="—Pngtree—cartoon brain thinking in confusion_5489694.png" type="image/png">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CALCULADORA MALUCA</title>
-   
-</head>
+        <!-- Babylon.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.2/dat.gui.min.js"></script>
+        <script src="https://assets.babylonjs.com/generated/Assets.js"></script>
+        <script src="https://cdn.babylonjs.com/recast.js"></script>
+        <script src="https://cdn.babylonjs.com/ammo.js"></script>
+        <script src="https://cdn.babylonjs.com/havok/HavokPhysics_umd.js"></script>
+        <script src="https://cdn.babylonjs.com/cannon.js"></script>
+        <script src="https://cdn.babylonjs.com/Oimo.js"></script>
+        <script src="https://cdn.babylonjs.com/earcut.min.js"></script>
+        <script src="https://cdn.babylonjs.com/babylon.js"></script>
+        <script src="https://cdn.babylonjs.com/materialsLibrary/babylonjs.materials.min.js"></script>
+        <script src="https://cdn.babylonjs.com/proceduralTexturesLibrary/babylonjs.proceduralTextures.min.js"></script>
+        <script src="https://cdn.babylonjs.com/postProcessesLibrary/babylonjs.postProcess.min.js"></script>
+        <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.js"></script>
+        <script src="https://cdn.babylonjs.com/serializers/babylonjs.serializers.min.js"></script>
+        <script src="https://cdn.babylonjs.com/gui/babylon.gui.min.js"></script>
+        <script src="https://cdn.babylonjs.com/inspector/babylon.inspector.bundle.js"></script>
 
-<body id="jjj">
-
-    <div id="menu">
-        <a href="https://github.com/tarciso6554">others projets </a>
-        <a href="index.html.html">Sobre</a>
-        <a href="https://github.com/tarciso6554/tarcisio6554.calculadoraMaluca" download>code</a>
-    </div>
-
-    <h1>CALCULADORA MALUCA</h1>
-
-    <input type="text" id="hhh" placeholder="Digite seu primeiro valor">
-    <br><br>
-    <input type="text" id="my_js" placeholder="Digite seu segundo valor">
-
-    <button class="glow-on-hover" type="button" onclick="go()">calcula</button>
-
-
-    <h1 id="rrr">Potenciação</h1>
-    <h1 id="mutipliticao" class="result">Multiplicação</h1>
-    <h1 id="divi" class="result">Divisão</h1>
-    <h1 id="porc" class="result">Porcentagem</h1>
-    
-  
-    <script>
-        function go() {
-            var numero1 = parseInt(document.getElementById('hhh').value);
-            var numero2 = parseInt(document.getElementById('my_js').value);
-            var poteciação = numero1 ** numero2;
-            var mutipliticao = numero1 * numero2;
-            var divisao = numero1 / numero2;
-            var po = numero1 / 100;
-            var re = po * numero2;
-
-            var rrr = document.getElementById("rrr");
-            var muti = document.getElementById("mutipliticao");
-            var dvis = document.getElementById("divi");
-            var porce = document.getElementById("porc");
-
-            if (!isNaN(numero1) && !isNaN(numero2)) {
-                var poteciação = numero1 ** numero2;
-                var mutipliticao = numero1 * numero2;
-                var divisao = numero1 / numero2;
-                var po = numero1 / 100;
-                var re = po * numero2;
-
-                var rrr = document.getElementById("rrr");
-                var muti = document.getElementById("mutipliticao");
-                var dvis = document.getElementById("divi");
-                var porce = document.getElementById("porc");
-
-                rrr.textContent = numero1 + "^" + numero2 + "=" + poteciação;
-                muti.textContent = numero1 + "x" + numero2 + "=" + mutipliticao;
-                dvis.textContent = numero1 + "/" + numero2 + "=" + divisao;
-                porce.textContent = numero1 + "%" + numero2 + "=" + re;
-            } else{
-                rrr.textContent ="not a number"
-                muti.textContent ="not a number"
-                dvis.textContent = "not a number"
-                porce.textContent ="not a number"
-            }
-        }
-        
-
-    </script>
-     <style>
-        p{
-            position: absolute;
-            left: 56%;
-            top: 66%;
-        }
-    html,
-body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100vh;
-   
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background: #000;
-}
-
-.glow-on-hover {
-    width: 15%;
-    height: 6%;
-    border: none;
-    outline: none;
-    color: #fff;
-    background: #111;
-    cursor: pointer;
-    position: relative;
-    z-index: 0;
-    border-radius: 100px;
-}
-
-.glow-on-hover:before {
-    content: '';
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-    position: absolute;
-    top: -2px;
-    left:-2px;
-    background-size: 400%;
-    z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-    border-radius: 10px;
-}
-
-.glow-on-hover:active {
-    color: #000
-}
-
-.glow-on-hover:active:after {
-    background: transparent;
-}
-
-.glow-on-hover:hover:before {
-    opacity: 1;
-}
-
-.glow-on-hover:after {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #111;
-    left: 0;
-    top: 0;
-    border-radius: 10px;
-}
-
-@keyframes glowing {
-    0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
-    100% { background-position: 0 0; }
-}
-
-            body {
+        <style>
+            html, body {
+                overflow: hidden;
+                width: 100%;
                 height: 100%;
-                
-                font-family: 'Arial', sans-serif;
                 margin: 0;
                 padding: 0;
-                background-color: #f1f1f1;
             }
-    
-            #menu {
-                background-color: #333;
-                overflow: hidden;
-            }
-    
-            #menu a {
-                float: left;
-                display: block;
-                color: white;
-                text-align: center;
-                padding: 14px 16px;
-                text-decoration: none;
-            }
-    
-            #menu a:hover {
-                background-color: #ddd;
-                color: black;
-            }
-    
-            h1 {
-                color: rgb(255, 0, 0);
-                margin: 1%;
-                padding: 0%;
-                text-align: left;
-            }
-    
-            #hhh,
-            #my_js {
-                color:black;
-                background-color: #f9fdff;
-                height: 16px;
-                padding: 14px 14px;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-                font-weight: bold;
-                font-size: 16px;
-                transition: background-color 0.3s, transform 0.3s;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-                transform-origin: center;
-            }
-    
-        
- </style>
-</body>
 
- </html>
+            #renderCanvas {
+                width: 100%;
+                height: 100%;
+                touch-action: none;
+            }
+            
+            #canvasZone {
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+    </head>
+<body>
+    <div id="canvasZone"><canvas id="renderCanvas"></canvas></div>
+    <script>
+        var canvas = document.getElementById("renderCanvas");
+
+        var startRenderLoop = function (engine, canvas) {
+            engine.runRenderLoop(function () {
+                if (sceneToRender && sceneToRender.activeCamera) {
+                    sceneToRender.render();
+                }
+            });
+        }
+
+        var engine = null;
+        var scene = null;
+        var sceneToRender = null;
+        var createDefaultEngine = function() { return new BABYLON.Engine(canvas, true, { preserveDrawingBuffer: true, stencil: true,  disableWebGL2Support: false}); };
+        var createScene = function () {
+    // This creates a basic Babylon Scene object (non-mesh)
+    var scene = new BABYLON.Scene(engine);
+
+    // This creates and positions a free camera (non-mesh)
+    var camera = new BABYLON.FreeCamera("camera1", new BABYLON.Vector3(0, 5, -10), scene);
+
+    // This targets the camera to scene origin
+    camera.setTarget(BABYLON.Vector3.Zero());
+
+    // This attaches the camera to the canvas
+    
+    // This creates a light, aiming 0,1,0 - to the sky (non-mesh)
+    var light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(0, 1, 0), scene);
+
+    // Default intensity is 1. Let's dim the light a small amount
+    light.intensity = 0.7;
+
+    // Our built-in 'sphere' shape.
+    var sphere = BABYLON.MeshBuilder.CreateCapsule("sphere", {diameter: 2, segments: 32}, scene);
+
+    // Move the sphere upward 1/2 its height
+    sphere.position.y = 1;
+   addEventListener("keydown",function(event){
+       if(event.key =="w"){
+           sphere.position.z+=1;
+           camera.position.z+=1;
+       }
+   })
+   addEventListener("keydown",function(envet){
+      if(event.key =="A"){
+          sphere.position.z+=88;
+      }
+   })
+
+   
+
+    // Our built-in 'ground' shape.
+    var ground = BABYLON.MeshBuilder.CreateGround("ground", {width: 6, height: 6}, scene);
+
+    return scene;
+};
+                window.initFunction = async function() {
+                    
+                    
+                    
+                    var asyncEngineCreation = async function() {
+                        try {
+                        return createDefaultEngine();
+                        } catch(e) {
+                        console.log("the available createEngine function failed. Creating the default engine instead");
+                        return createDefaultEngine();
+                        }
+                    }
+
+                    window.engine = await asyncEngineCreation();
+        if (!engine) throw 'engine should not be null.';
+        startRenderLoop(engine, canvas);
+        window.scene = createScene();};
+        initFunction().then(() => {sceneToRender = scene                    
+        });
+
+        // Resize
+        window.addEventListener("resize", function () {
+            engine.resize();
+        });
+    </script>
+</body>
