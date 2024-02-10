@@ -1,36 +1,21 @@
-
-var  nnj = document.getElementById('jjj')
-
-function mause(){
+function calcula(){
+    let get_value_inpunt = parseInt(document.getElementById('hhh').value)
+    let get_valu_inpunt_2 =parseInt(document.getElementById("my_js").value)
+    let mutlica = get_value_inpunt+get_valu_inpunt_2
     
-    nnj.classList.add("my_class")
+    let mutlipicacacao =document.getElementById("mutipliticao")
+    let poteciacao = document.getElementById("rrr")
+    let replosive_for_poteciacao = get_value_inpunt**get_valu_inpunt_2
+    let divisao = document.getElementById('divi')
+    let divisa = get_value_inpunt/get_valu_inpunt_2
 
-}
-function retira(){
-    nnj.classList.remove("my_class")
+    
+    let porcetagem = document.getElementById("porc")
+    let porc = get_value_inpunt/get_valu_inpunt_2
+    let mutlica_relsut_porc = porc*get_valu_inpunt_2
+    mutlipicacacao.textContent= `${get_value_inpunt}+ ${get_valu_inpunt_2}  = ${mutlica}`
+    poteciacao.textContent =replosive_for_poteciacao    
+    divisao.textContent = divisa
+    porcetagem.textContent =mutlica_relsut_porc
+
 } 
-
-function go(){
-   
-    var numero1 = Number(document.getElementById('hhh').value);
-    var numero2 = Number(document.getElementById("my_js").value);
-    var numero = Number(numero1+numero2)
-    var NAN = document.getElementById('rrr')
-    var NAN1 = document.getElementById('mutipliticao')
-    var NAN2 = document.getElementById('porc')
-    var NAN3 = document.getElementById('rrr')
-   if (isNaN(numero1) &&(isNaN(numero2))){
-    
-    console.log= "deu erado"
-    
-    NAN.textContent = "not a number"
-    
-   }else{
-    console.log("deu certo")
-    const porce = numero1/100
-    const porc = porce*numero2
-
-    NAN2.textContent  =numero1+"%"+"de"+numero2+ "="+porc
-    
-    NAN.textContent =numero1+"+"+numero2+"="+numero
-}}
