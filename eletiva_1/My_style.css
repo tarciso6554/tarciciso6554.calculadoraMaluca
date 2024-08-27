@@ -1,115 +1,62 @@
-  @keyframes animatio{
-             0%{
-                color :black;
-                }30%{
-                    color: rgb(253, 21, 0);
-                }
-                50%{
-                    color :"red";
-                }
-            100%{
-                color: rgb(9, 144, 255);
-                
-            }    
-        }
-        @keyframes button{
-            1%{
-                transform: scale(1.1);
-                }
-            20%{
-                transform: scale(1.3);
-            }
-            50%{
-                transform: scale(1.4);
-            } 
-            100%{
-                transform: scale(1.1);
-            } 
+/* e.g. eletiva_1/My_style.css */
 
-        }
-        .my_class{
-            animation:button;
-            animation-duration:3s ;
-            animation-iteration-count: infinite;
-        }
-        #hhh {
-            color:red;
-            background-color: gold;
-            height: 23px;
-        }
-        #rrr {
-            position: absolute;
-            top: 129px;
-            color: black;
-            background-color: orange;
-            font-family: fantasy;
-            animation-name:animatio;
-            animation-duration: 6s;
-            animation-iteration-count: infinite;
-        }
-        #my_js {
-            color: black;
-            background-color: green;
-            height: 23px;
-        }
-        #jjj {
-            position: static;
-            top:111px;
-            left: 199px;
-            height: 33px;
-            background-color:white;
-            color:black;
-            font-family: impact;}
-            
-        p {
-            color: blue;
-            font-family: impact;
-        }
-        input {
-            height: 33px;
-        }.nnn{
-            height: 370px;;
-            
-            position: static;
-            background-color: #232F3E;
-            top: px;
-            left: 111px;
-            }
-            
-            a{
-                color:rgb(248, 248, 248);
-            }
-            #mutipliticao{
-            position: absolute;
-            top: 189px;
-            color: black;
-            background-color: rgb(0, 0, 0);
-            font-family: fantasy;
-            animation-name:animatio;
-            animation-duration: 6s;
-            animation-iteration-count: infinite;
-               
-            
-            }
-            #divi{
-            height:8%;
-            position: absolute;
-            top: 270px;
-            color: black;
-            background-color: orange;
-            font-family: fantasy;
-            animation-name:animatio;
-            animation-duration: 6s;
-            animation-iteration-count: infinite;
-            }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
 
-    h1{
-       position: absolute;
-       left:7%;
-    }
-    #porc{
-       top:60%;
-    }
-    body {
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; }
+#menu {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+#menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 16px;
+}
+
+#menu a:hover {
+    background-color: #575757;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(100% - 40px);
+    max-width: 300px;
+    display: block;
+    margin: 10px auto;
+}
+
+button.glow-on-hover {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button.glow-on-hover:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.result {
+    color: #007bff;
+}
